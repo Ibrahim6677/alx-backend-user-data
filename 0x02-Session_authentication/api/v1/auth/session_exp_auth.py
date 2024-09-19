@@ -48,3 +48,4 @@ class SessionExpAuth(SessionAuth):
             exp_time = session_dict['created_at'] + time_span
             if exp_time < cur_time:
                 return None
+            return session_dict['user_id']
